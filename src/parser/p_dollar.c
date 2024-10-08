@@ -95,33 +95,6 @@ void	arg_type(t_tokens *token, int oldsize, int newsize, int i)
 	token->type = new_type;
 }
 
-int	dollar_aux_config(t_tokens *token, int *i, t_data *data)
-{
-	if (token->tokens[*i][0] == '$' && token->tokens[*i][1] == '?')
-		dollar_replace(&(token->tokens[*i]), *i, data->shell);
-	else if ((token->tokens[*i][1] == '$' && *i) || (*i == 0
-			&& token->tokens[*i][0] == '$'))
-	{
-		dollar_replace(&(token->tokens[*i]), *i, data->shell);
-		token->tokens = dollar_spaces_split(token->tokens, *i);
-		data->presence = 1;
-		data->newlen = count(token->tokens);
-		if (data->oldlen != data->newlen)
-			arg_type(token, data->oldlen, data->newlen, *i);
-		else if (token->type[*i] < 0)
-			token->type[*i] = -PROTECTED_DOLLAR;
-		else
-			token->type[*i] = PROTECTED_DOLLAR;
-		if (token->type[0] == PROTECTED_DOLLAR
-			|| token->type[0] == -PROTECTED_DOLLAR)
-			token->type[*i] = -CMD;
-		(*i) += data->newlen - data->oldlen;
-		data->oldlen = data->newlen;
-		return (1);
-	}
-	return (0);
-}
-
 char	*dollar_config(char *str, int pos, t_shell *shell)
 {
 	char	*expanded_value;

@@ -28,14 +28,12 @@ LDFLAGS = -L./libft -lft -lreadline
 RM = rm -f
 
 PARSER_SRCS=			./src/parser/env_variable.c\
-						./src/parser/p_command.c\
 						./src/parser/p_dollar.c\
-						./src/parser/p_quote.c\
 						./src/parser/p_token.c\
+						./src/parser/p_quote.c\
 						./src/parser/p_token_set.c\
 						./src/parser/p_token_filler.c\
 						./src/parser/p_token_filler_aux.c\
-						./src/parser/quote_init.c\
 						main_helper.c\
 						main.c\
 						
@@ -45,7 +43,6 @@ UTILS_SRCS=				./src/utils/backslash.c\
 						./src/utils/erros.c\
 						./src/utils/free.c\
 						./src/utils/math.c\
-						./src/utils/separator_handling.c\
 						./src/utils/strings_handling.c\
 						./src/utils/syntax_check.c\
 						./src/utils/token_handling.c\
@@ -54,6 +51,7 @@ UTILS_SRCS=				./src/utils/backslash.c\
 						./src/utils/token_set_utils.c\
 						./src/utils/token_helper.c\
 						./src/utils/env.c\
+						./src/utils/token_utils_helper.c\
 						./src/exec/builtin.c\
 						./src/exec/cmds.c\
 						./src/exec/get_next_line.c\

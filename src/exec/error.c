@@ -87,9 +87,9 @@ void	free_exec_node(t_exec *exec_node)
 
 void	ft_free(void *content)
 {
-	t_exec *node;
-    
-    node = content;
+	t_exec	*node;
+
+	node = content;
 	free_form(&node->args);
 	free(node->path);
 	if (node->in != STDIN_FILENO)
