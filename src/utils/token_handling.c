@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   token_handling.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliskam <eliskam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:06:55 by yasmine           #+#    #+#             */
-/*   Updated: 2024/10/08 10:42:26 by eliskam          ###   ########.fr       */
+/*   Updated: 2024/10/09 01:00:19 by yfontene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 char	**token_split(char *line, int nbr)
 {
+	printf("entrou em token_split\n");
 	char	**token;
 	int		i;
 
@@ -32,6 +33,7 @@ char	**token_split(char *line, int nbr)
 
 int	get_token_type(char *content, int len)
 {
+	printf("entrou em get_token_type\n");
 	if (ft_strncmp(">", content, max_of(1, len)) == 0)
 		return (REDIR_OUT_SUBS);
 	else if (ft_strncmp(">>", content, max_of(1, len)) == 0)
@@ -61,6 +63,7 @@ void	set_token_aux(int i, int *cmd, int *type)
 
 void	set_tokens_type(int *type, char **content)
 {
+	printf("entrou em set_tokens_type\n");
 	int	i;
 	int	cmd;
 	int	j;
@@ -84,6 +87,7 @@ void	set_tokens_type(int *type, char **content)
 
 int	*set_token(t_tokens token)
 {
+	printf("entrou em set_token\n");
 	int	*type;
 
 	type = malloc(sizeof(int) * (token.nbr + 1));

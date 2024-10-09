@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eliskam <eliskam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 19:48:13 by yasmine           #+#    #+#             */
-/*   Updated: 2024/10/08 11:02:00 by eliskam          ###   ########.fr       */
+/*   Updated: 2024/10/09 01:04:57 by yfontene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,7 @@ int			check_unclosed_quotes(char *str);
 void		handle_quotes(char current_char, bool *in_quotes, char *quote_type);
 bool		is_pipe(char current_char, bool in_quotes);
 bool		is_quote(char c);
+bool 		is_double_redirect(char *line, int i);
 int			handle_tquotes(char *line, int i);
 int			handle_token(char *line, int i);
 char		**duplicate_and_sort_keys(char **keys);

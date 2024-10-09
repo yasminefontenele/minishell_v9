@@ -15,6 +15,7 @@
 
 void	process_token(t_tokens *token, int i, int j, t_shell *shell)
 {
+	printf("entrou em filler_stokens\n");
 	char	*original_token;
 	char	*expanded_str;
 
@@ -42,6 +43,7 @@ void	process_token(t_tokens *token, int i, int j, t_shell *shell)
 
 void	combine_tokens(t_tokens *token, int i, int j)
 {
+	printf("entrou em filler_stokens\n");
 	char	*temp;
 
 	if (j > 1 && ft_strchr(token[i].tokens[j - 2], '='))
@@ -57,6 +59,7 @@ void	combine_tokens(t_tokens *token, int i, int j)
 
 void	filler_stokens(char **cmds, t_tokens **token, int nbr, t_shell *shell)
 {
+	printf("entrou em filler_stokens\n");
 	int	i;
 	int	j;
 
