@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tokenize.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emencova <emencova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:19:50 by emencova          #+#    #+#             */
-/*   Updated: 2024/10/08 22:22:27 by emencova         ###   ########.fr       */
+/*   Updated: 2024/10/09 02:04:04 by yfontene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 t_exec	*create_exec_node(char *cmd, t_tokens *token)
 {
-	printf("entrou em create_exec_node\n");
 	t_exec	*exec_node;
 	int		j;
 
@@ -40,7 +39,6 @@ t_exec	*create_exec_node(char *cmd, t_tokens *token)
 
 void	add_exec_node_to_list(t_list **commands_list, t_exec *exec_node)
 {
-	printf("entrou em add_exec_node_to_list\n");
 	t_list	*new_node;
 
 	new_node = ft_lstnew(exec_node);
@@ -59,7 +57,6 @@ void	free_token_resources(t_tokens *token)
 static void	process_command(char **cmd, int index,
 		t_shell *shell, t_list **commands_list)
 {
-	printf("entrou em process_command\n");
 	t_tokens	*token;
 	t_exec		*exec_node;
 
@@ -85,7 +82,6 @@ static void	process_command(char **cmd, int index,
 
 void	tokenize_commands(char **cmdstr, t_list **commands_list, t_shell *shell)
 {
-	printf("entrou em tokenize_commands\n");
 	char	**cmds;
 	int		i;
 

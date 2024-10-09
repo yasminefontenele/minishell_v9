@@ -6,7 +6,7 @@
 /*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:48:35 by yasmine           #+#    #+#             */
-/*   Updated: 2024/10/09 00:59:31 by yfontene         ###   ########.fr       */
+/*   Updated: 2024/10/09 02:03:15 by yfontene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 void	initialize_token(char **cmds, t_tokens **token, int i, int nbr)
 {
-	printf("entrou em inialize_token\n");
 	if (!valid_quotes(cmds[i]))
 	{
 		ft_error("Unclosed or unmatched quotes found", 1);
@@ -34,7 +33,6 @@ void	initialize_token(char **cmds, t_tokens **token, int i, int nbr)
 
 char	*expand_variable(char *original_token, int *k, t_shell *shell)
 {
-	printf("entrou em expand_variable\n");
 	char	*expanded_var;
 	int		var_len;
 
@@ -52,7 +50,6 @@ char	*expand_variable(char *original_token, int *k, t_shell *shell)
 
 char	*process_expansion(char *original_token, t_shell *shell)
 {
-	printf("entrou em process_expansion\n");
 	char	*expanded_str;
 	char	*expanded_var;
 	int		k;

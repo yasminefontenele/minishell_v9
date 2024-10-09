@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tokenize_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emencova <emencova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 22:18:07 by emencova          #+#    #+#             */
-/*   Updated: 2024/10/08 22:19:43 by emencova         ###   ########.fr       */
+/*   Updated: 2024/10/09 02:05:47 by yfontene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	handle_memory_failure(char *message)
 
 t_tokens	*create_and_fill_tokens(char **cmd, int index, t_shell *shell)
 {
-	printf("entrou em create_and_fill_tokens\n");
 	t_tokens	*token;
 
 	token = malloc(sizeof(t_tokens));
@@ -46,7 +45,6 @@ t_tokens	*create_and_fill_tokens(char **cmd, int index, t_shell *shell)
 
 void	remove_quotes_from_args(t_exec *node)
 {
-	printf("entrou em remove_quotes_from_args\n");
 	int		i;
 	char	*temp;
 
