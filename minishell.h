@@ -6,7 +6,7 @@
 /*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 19:48:13 by yasmine           #+#    #+#             */
-/*   Updated: 2024/10/09 02:22:46 by yfontene         ###   ########.fr       */
+/*   Updated: 2024/10/09 05:38:44 by yfontene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,5 +178,11 @@ int			get_env_size(char **env);
 void		sigint_handler(int sig);
 void		cleanup_shell(t_shell *shell);
 void		handle_quote_state(char c, bool *in_quotes, char *quote_type);
+char		*parse_simple_token_with_quotes(char *line, int *pos,
+				int keep_quotes);
+char		*parse_special_token(char *line, int *pos);
+char		*parse_quoted_token(char *line, int *current_pos, int keep_quotes);
+char		*parse_redirect_token(char *line, int *current_pos);
+char		*parse_simple_token(char *line, int *current_pos);
 
 #endif

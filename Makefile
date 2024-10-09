@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: eliskam <eliskam@student.42.fr>            +#+  +:+       +#+         #
+#    By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/12 11:06:25 by yasmine           #+#    #+#              #
-#    Updated: 2024/10/08 16:19:47 by eliskam          ###   ########.fr        #
+#    Updated: 2024/10/09 05:25:51 by yfontene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ RM = rm -f
 
 PARSER_SRCS=			./src/parser/env_variable.c\
 						./src/parser/p_dollar.c\
+						./src/parser/p_parser.c\
 						./src/parser/p_token.c\
 						./src/parser/p_quote.c\
 						./src/parser/p_token_set.c\

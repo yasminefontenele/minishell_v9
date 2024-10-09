@@ -6,7 +6,7 @@
 /*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:48:35 by yasmine           #+#    #+#             */
-/*   Updated: 2024/10/09 02:03:25 by yfontene         ###   ########.fr       */
+/*   Updated: 2024/10/09 04:42:19 by yfontene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ void	process_token(t_tokens *token, int i, int j, t_shell *shell)
 	}
 	else if (token[i].tokens[j][0] == '\''
 			&& token[i].tokens[j][ft_strlen(token[i].tokens[j]) - 1] == '\'')
+	{
 		token[i].tokens[j] = remove_quotes(token[i].tokens[j]);
+	}
 	else if (token[i].tokens[j][0] == '$')
 	{
 		if (ft_isalpha(token[i].tokens[j][1]) || token[i].tokens[j][1] == '_'
