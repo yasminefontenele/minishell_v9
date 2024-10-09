@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   token_handling.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: eliskam <eliskam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:06:55 by yasmine           #+#    #+#             */
-/*   Updated: 2024/10/09 04:43:38 by yfontene         ###   ########.fr       */
+/*   Updated: 2024/10/09 08:48:59 by eliskam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,10 @@ int	get_token_type(char *content, int len)
 void	set_tokens_type(int *type, char **content)
 {
 	int	i;
-	int	cmd;
 	int	j;
 	int	len;
 
 	i = -1;
-	cmd = 0;
 	while (content[++i])
 	{
 		if (i == 0)

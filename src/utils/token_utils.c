@@ -3,41 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   token_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yfontene <yfontene@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: eliskam <eliskam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:48:35 by yasmine           #+#    #+#             */
-/*   Updated: 2024/10/09 02:02:51 by yfontene         ###   ########.fr       */
+/*   Updated: 2024/10/09 08:51:34 by eliskam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../minishell.h"
 #include "../exec/execute.h"
 
-int	count_token(char *line)
-{
-	int	i;
-	int	count;
 
-	i = 0;
-	count = 0;
-	while (line[i])
-	{
-		i = skip_space(line, i);
-		if (!line[i])
-			break ;
-		if (is_quote(line[i]))
-		{
-			i = handle_tquotes(line, i);
-			if (i == -1)
-				return (-1);
-		}
-		else
-			i = handle_token(line, i);
-		count++;
-		i++;
-	}
-	return (count);
-}
 
 char	*extract_substring(char const *s, unsigned int start, size_t end)
 {
